@@ -1,0 +1,258 @@
+<html lang="pt">
+<head>
+<title>Classificador de Heróis</title>
+<script src="index.js" defer></script>
+<style>
+  .question {
+     margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+ 
+  <h1>Classificador de Heróis</h1>
+  <p>Bem vindo ao Sistema Guvo de Classificação de Heróis. Aqui você será submetido à um rápido questionário, onde sua índole comportamental será julgada, e ao final receberá uma nota pelo seu desempenho moral. Então relaxe e se abra para descobrir sua pontuação (de acordo com os critérios do Sistema Guvo).
+  <hr />
+  
+  Saudações. Como você se chama? 
+  <form action>
+  <input type="text" name="name" id="heroi" placeholder="seu nome" autocomplete="on" method="POST">
+  <input type="submit" id="send" value="iniciar teste">
+  <hr />
+
+  <form id="quizForm">
+        <div class="question">
+            <p><h4>Pergunta 1</h4> Você depende mais da força do que da persuasão para vencer um inimigo?</p>
+            <label><input type="radio" name="q1" value="0"> sim</label><br>
+            <label><input type="radio" name="q1" value="230"> não</label><br>
+            <label><input type="radio" name="q1" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 2</h4> Você busca competir e ser o melhor nas coisas que faz?</p>
+            <label><input type="radio" name="q2" value="0"> sim</label><br>
+            <label><input type="radio" name="q2" value="230"> não</label><br>
+            <label><input type="radio" name="q2" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 3</h4> O seu trabalho como herói é mais importante do que sua vida pessoal?</p>
+            <label><input type="radio" name="q3" value="460"> sim</label><br>
+            <label><input type="radio" name="q3" value="0"> não</label><br>
+            <label><input type="radio" name="q3" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 4</h4> Você prefere trabalhar sozinho, evitando distrações e relacionamentos?</p>
+            <label><input type="radio" name="q4" value="0"> sim</label><br>
+            <label><input type="radio" name="q4" value="230"> não</label><br>
+            <label><input type="radio" name="q4" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 5</h4> Você gostaria de ser adorado e respeitado como um líder inquestionável?</p>
+            <label><input type="radio" name="q5" value="0"> sim</label><br>
+            <label><input type="radio" name="q5" value="460"> não</label><br>
+            <label><input type="radio" name="q5" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 6</h4> Você se aproveitaria da inocência alheia para completar sua missão?</p>
+            <label><input type="radio" name="q6" value="0"> sim</label><br>
+            <label><input type="radio" name="q6" value="230"> não</label><br>
+            <label><input type="radio" name="q6" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 7</h4> Se outras pessoas passassem à criticar suas atitudes como herói, você, ao invés de se adequar, continuaria agindo como acha que é o correto?</p>
+            <label><input type="radio" name="q7" value="0"> sim</label><br>
+            <label><input type="radio" name="q7" value="230"> não</label><br>
+            <label><input type="radio" name="q7" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 8</h4> Na oportunidade de derrotar um inimigo poderoso, você o mataria? </p>
+            <label><input type="radio" name="q8" value="0"> sim</label><br>
+            <label><input type="radio" name="q8" value="230"> não</label><br>
+            <label><input type="radio" name="q8" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 9</h4> Se fosse comprovado que a existência de heróis esta aumentando a incidência de vilões, você deixaria de ser um herói? </p>
+            <label><input type="radio" name="q9" value="460"> sim</label><br>
+            <label><input type="radio" name="q9" value="0"> não</label><br>
+            <label><input type="radio" name="q9" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 10</h4> Você salvaria alguém que não deseja ser salva por você?</p>
+            <label><input type="radio" name="q10" value="460"> sim</label><br>
+            <label><input type="radio" name="q10" value="0"> não</label><br>
+            <label><input type="radio" name="q10" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 11</h4> Você ficaria contra o seu amigo em um conflito caso ele fosse o culpado, mesmo que ele não esteja prejudicando ninguém que você goste?</p>
+            <label><input type="radio" name="q11" value="230"> sim</label><br>
+            <label><input type="radio" name="q11" value="0"> não</label><br>
+            <label><input type="radio" name="q11" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 12</h4> Você se alhearia à alguém que te fez mal para ajudá-lo à conquistar uma vida justa?</p>
+            <label><input type="radio" name="q12" value="460"> sim</label><br>
+            <label><input type="radio" name="q12" value="0"> não</label><br>
+            <label><input type="radio" name="q12" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 13</h4> Você prenderia alguém que rouba todo dia para sustentar uma comunidade negligenciada pelo governo?</p>
+            <label><input type="radio" name="q13" value="0"> sim</label><br>
+            <label><input type="radio" name="q13" value="460"> não</label><br>
+            <label><input type="radio" name="q13" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 14</h4> Em uma guerra, onde os recursos são poucos, você dividiria eles com outras famílias, mesmo sabendo que, caso elas não fizerem o mesmo no futuro, a sua poderia morrer?</p>
+            <label><input type="radio" name="q14" value="230"> sim</label><br>
+            <label><input type="radio" name="q14" value="0"> não</label><br>
+            <label><input type="radio" name="q14" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 15</h4> Você aceitaria ser preso por ter matado uma pessoa, sendo que você fez isso para salvar cem pessoas da morte?</p>
+            <label><input type="radio" name="q15" value="230"> sim</label><br>
+            <label><input type="radio" name="q15" value="0"> não</label><br>
+            <label><input type="radio" name="q15" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 16</h4> Você aceitaria viver como um vilão se isso parasse alguma guerra entre povos?</p>
+            <label><input type="radio" name="q16" value="460"> sim</label><br>
+            <label><input type="radio" name="q16" value="0"> não</label><br>
+            <label><input type="radio" name="q16" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 17</h4> Caso o seu arqui-inimigo fosse inocentado pela legislação, e liberado para continuar com suas atividades controversas, você desrespeitaria a lei para aplicar sua própria justiça?</p>
+            <label><input type="radio" name="q17" value="0"> sim</label><br>
+            <label><input type="radio" name="q17" value="460"> não</label><br>
+            <label><input type="radio" name="q17" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 18</h4> Caso sua amada cidade colocasse seu arqui-inimigo como prefeito, você, ao invés de deixar eles arcarem com as consequências, interferia no governo caso acontecesse algo que você considera errado?</p>
+            <label><input type="radio" name="q18" value="0"> sim</label><br>
+            <label><input type="radio" name="q18" value="230"> não</label><br>
+            <label><input type="radio" name="q18" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 19</h4> Ao descobrir perversos segredos de um grande império, você revelaria à própria população, sabendo que isso poderia gerar uma grande revolta popular?</p>
+            <label><input type="radio" name="q19" value="0"> sim</label><br>
+            <label><input type="radio" name="q19" value="230"> não</label><br>
+            <label><input type="radio" name="q19" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 20</h4> Você acaba de conhecer uma grande tribo, governada à centenas de anos pela mesma família, onde a desigualdade de castas é injusta e nociva para a maioria, porem todos estão conformados graças à religião local. Nesse senário, você tentaria reestruturar a sociedade para proporcionar uma melhoria na qualidade de vida da maioria?</p>
+            <label><input type="radio" name="q20" value="460"> sim</label><br>
+            <label><input type="radio" name="q20" value="0"> não</label><br>
+            <label><input type="radio" name="q20" value="230"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 21</h4> Você deixaria um grupo de indivíduos sofrerem, desde que isso salve a vida de um outro grupo?</p>
+            <label><input type="radio" name="q21" value="230"> sim</label><br>
+            <label><input type="radio" name="q21" value="0"> não</label><br>
+            <label><input type="radio" name="q21" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 22</h4> Você tiraria a liberdade de um grupo de pessoas para mantê-las em segurança?</p>
+            <label><input type="radio" name="q22" value="230"> sim</label><br>
+            <label><input type="radio" name="q22" value="0"> não</label><br>
+            <label><input type="radio" name="q22" value="460"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 23</h4> Você mataria a pessoa que mais ama para salvar o mundo da destruição?</p>
+            <label><input type="radio" name="q23" value="1"> sim</label><br>
+            <label><input type="radio" name="q23" value="0"> não</label><br>
+            <label><input type="radio" name="q23" value="0"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 24</h4> Você morreria para salvar a vida de um desconhecido?</p>
+            <label><input type="radio" name="q24" value="0"> sim</label><br>
+            <label><input type="radio" name="q24" value="0"> não</label><br>
+            <label><input type="radio" name="q24" value="1"> depende</label><br>
+        </div>
+        <div class="question">
+            <p><h4>Pergunta 25</h4> O que você prefere?</p>
+            <label><input type="radio" name="q25" value="0"> Acreditar que esta certo</label><br>
+            <label><input type="radio" name="q25" value="0"> Saber que esta errado</label><br>
+        </div>
+     
+     <button type="reset">limpar respostas</button>   
+     <button type="button" onclick="calcularPontuacao()">Enviar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularPontuacao() {
+            const form = document.getElementById('quizForm');
+            const resultado = document.getElementById('resultado');
+            let pontuacao = 0;
+            const respostas = form.querySelectorAll('input[type="radio"]:checked');
+
+            respostas.forEach(resposta => {
+                pontuacao += parseInt(resposta.value);
+            });
+
+            resultado.innerText = `Sua pontuação é: ${pontuacao}`;
+        }
+    </script>
+    
+
+  <hr />
+ <h3>Resultado da pesquisa:</h3>
+ Pontuação:</p>
+
+O herói denominado {nome} esta no nível {nível}<p>
+{descrição do seu nível} <p>
+ 
+ <hr />
+ <h3>Sistema Guvo</h3>
+ <strong>Pontuação e critérios:</strong><p>
+Os critérios são meramente pessoais, que refletem apenas as minhas expectativas do que é o mais eficiente para proporcionar segurança ao maior numero de pessoas. E conforme as questões são respondidas nessa direção, maior é a pontuação. 
+ Para cada resposta "correta" você ganha 460 pontos, para cada resposta "neutra" você ganha 230 pontos, e as respostas "erradas" não alteram os pontos.<p>
+
+ <strong>Pontos por classe:</strong><p>
+ Herói ao contrário (de 0 à 2221); Tão bom que faz mal (de 2222 à 3332); Certo pelo certo (de 3333 à 4443); Bem intencionado (de 4444 à 5554); Cidadão de bem (de 5555 à 6665); Escoteiro (de 6666 à 7776); Prometeu (de 7777 à 8887); Messias (de 8888 à 9998); Juiz Galactico (acima de 9999).<p>
+
+ </body>
+</html>
+
+
+Juiz Galáctico: mais neutro do que sabonete de bebê.
+ Você é tão imparcial e justo que até uma arvore pode parecer cruel ou heroica demais perto de ti.
+ Provavelmente você vê a sociedade humana como só mais uma espécie a ser preservada no zoológico do Universo, e nada consegue te abalar ou te deixar perplexo. Frio e calculista como minha ex-namorada.
+ Exemplo notável (ou nem tanto): Sherlock Holmes
+
+Messias: não é o herói que a sociedade quer, mas sim o que ela merece.
+ Você sabe que é impossível agradar à todos, mas a sua convecção e disciplina vai salvar boa parte a especie humana, principalmente dela mesma.
+ Seu amor pelos humanos é maior do que por ti mesmo... parabéns, pois muitos vão te odiar, mas vão estar vivos graças à ti.
+ Exemplo notável (ou nem tanto): Ozymandias
+ 
+Prometeu: aquele que cumpriu com seu nome (desculpa pela piada)
+ Você faz o bem sem ver a quem... ou é o que esta escrito em sua lapide, pois salvar a maioria causa a fúria de alguns grupos poderoso.
+ Parabéns, sua história se tornará uma lenda e um simbolo a ser seguido pelos bons e justos. Pena que você vai morrer antes de ver essas revoluções.
+  Exemplo notável (ou nem tanto): Joana d'Arc
+  
+Escoteiro: provavelmente joga de paladino no RPG.
+ Você segue o que seu coração diz que é o correto, e por sorte, seu coração não é tão mal assim.
+ Seu senso de justiça casa perfeitamente com qualquer personagem genérico da DC e Marvel. E provavelmente terá vários nerdolas te adorando como um semideus.
+  Exemplo notável (ou nem tanto): Super-Homem
+  
+Cidadão de bem: teoricamente nunca roubou, nunca traiu e vai pra igreja toda semana (sei lá se isso é bom afinal de contas).
+ Você tem seu cérebro já treinado pra fazer o que te ensinaram que é o certo, e não perde muito tempo com dilemas morais... você vai e faz!
+ Provavelmente é respeitado no seu grupo social e deve ter orgulho de si mesmo, apesar que nem sempre você conseguir o que queria.
+  Exemplo notável (ou nem tanto): Capitão América.
+  
+Bem intencionado: como diz o ditado, o inferno ta cheio de gente como você (e acho que isso é algo bom)
+ Você pode não ser um poço de inteligência, mas usa o pouco que tem para se sentir bem consigo mesmo.
+ De vez em quando você ajuda alguém e se sente um anjo, lhe permitindo cometer erros mundanos sem se martirizar muito. E se todos fosse como você, provavelmente o mundo seria um lugar melhor.
+ Exemplo notável (ou nem tanto): Son Goku.
+ 
+Certo pelo certo: confiável mais não espero nada de ti.
+ Você evita pisar no calo dos outros, cuida do seu próprio caminho e dificilmente ta envolvido em encrenca. Uma pessoa simples... eu gosto disso.
+ Você ajuda aqueles que são importantes pra você, não faz mal pra ninguém (pelo nos, não de graça), tenta não se envolver nos problemas dos outros e, as vezes, por sorte ou azar, salva o dia.
+ Exemplo notável (ou nem tanto): Guts.
+
+Tão bom que faz mal: você acredita que tudo o que faz é o correto, logo nunca erra...
+ O que você entende como super herói é um arquétipo genérico de guerreiro forte e destemido, e nesse sentido você é tão heroico quanto inteligente.
+ Você curte ser idolatrado, faz coleção de prêmios e toda vez que ajuda algum, publica a façanha nas redes sociais, para todos verem o quanto você é bom.
+ Exemplo notável (ou nem tanto): Anakin Skywalker.
+ 
+Herói ao contrário: por que você esse teste? Acho que você queria saber o quanto "não herói" você é.
+ Como não quero te julgar muito, vou partir do pressuposto que ser um canalha é algo heroico na sua cultura, então nesse caso, a culpa não é sua. Mas você podia aproveitar e ir no psicólogo de vez em quando.
+ Provavelmente você se sente incompreendido e injustiçado, por isso que ser respeitado como um herói, ou simplesmente você é filho de gente rica e nunca sofre repreensão, e nesse caso eu vou te ajudar: você é um merda :) Mas isso não te impede de ser respeitado e endeusado por outros merdas, o que te faz ser um herói da merdolandia.
+  Exemplo notável (ou nem tanto): Hitler
