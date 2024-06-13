@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankeada</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #444;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de partidas Rankeadas</h1>
+    <p>Bem-vindo.
+    Utilizando conhecimentos lógicos, desenvolvi uma Calculadora de Partidas Rankeadas.
+    Criei uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador, e depois disso retorna o resultado do saldo de Rankeadas, através do calculo (vitórias - derrotas).</p>
+    <hr />
+    
+    <form id="dados">
+        <label for="vitorias">Vitórias:</label>
+        <input type="number" id="vitorias" placeholder="Insira um número natural" autocomplete="on">
+        <label for="derrotas">Derrotas:</label>
+        <input type="number" id="derrotas" placeholder="Insira um número natural" autocomplete="on">
+        <button type="button" id="calcular" onclick="calcularPontuacao()">Calcular</button>
+    </form>
+    <hr />
+    <p id="resultado"></p>
+
+    <script>
+    function calcularPontuacao() {
+        var v = parseInt(document.getElementById('vitorias').value);
+        var d = parseInt(document.getElementById('derrotas').value);
+        
+        // Certifique-se de que os valores são números
+        if (isNaN(v) || isNaN(d)) {
+            document.getElementById('resultado').innerText = "Por favor, insira valores válidos para vitórias e derrotas.";
+            return;
+        }
+
+        var saldo = v - d;
+        var nivel;
+
+        switch (true) {
+            case (saldo < 10):
+                nivel = "Ferro";
+                break;
+            case (saldo >= 10 && saldo < 21):
+                nivel = "Bronze";
+                break;
+            case (saldo >= 21 && saldo < 51):
+                nivel = "Prata";
+                break;
+            case (saldo >= 51 && saldo < 81):
+                nivel = "Ouro";
+                break;
+            case (saldo >= 81 && saldo < 91):
+                nivel = "Diamante";
+                break;
+            case (saldo >= 91 && saldo < 101):
+                nivel = "Lendário";
+                break;
+            case (saldo >= 101):
+                nivel = "Imortal";
+                break;
+            default:
+                nivel = "Indeterminado";
+        }
+
+        document.getElementById('resultado').innerText = "O Herói tem um saldo de " + saldo + " vitórias e está no nível " + nivel + ".";
+    }
+    </script>
+</body>
+</html>
